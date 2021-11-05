@@ -4,13 +4,13 @@
 // import { WatchListStyled } from "./WatchListStyled";
 import React, { Component } from "react";
 import shortid from "shortid";
-import Container from "./components/Container";
 import TodoList from "./components/TodoList";
 import TodoEditor from "./components/TodoEditor";
 import Filter from "./components/TodoFilter";
 import Modal from "./components/Modal";
 import IconButton from "./components/IconButton";
 import { ReactComponent as AddIcon } from "./icons/add.svg";
+import { WatchListStyled } from "./WatchListStyled";
 const initialState = { message: "" };
 // const MyWatchList = () => {
 //   const [state, setState] = useState(initialState);
@@ -168,7 +168,6 @@ class MyWatchList extends Component {
     const prevTodos = prevState.todos;
 
     if (nextTodos !== prevTodos) {
-      console.log("Обновилось поле todos, записываю todos в хранилище");
       localStorage.setItem("todos", JSON.stringify(nextTodos));
     }
 
@@ -233,7 +232,7 @@ class MyWatchList extends Component {
     const visibleTodos = this.getVisibleTodos();
 
     return (
-      <Container>
+      <WatchListStyled>
         <IconButton onClick={this.toggleModal} aria-label="Добавить todo">
           <AddIcon width="40" height="40" fill="#fff" />
         </IconButton>
@@ -253,7 +252,7 @@ class MyWatchList extends Component {
         <Filter value={filter} onChange={this.changeFilter} />
 
         <TodoList todos={visibleTodos} onDeleteTodo={this.deleteTodo} onToggleCompleted={this.toggleCompleted} />
-      </Container>
+      </WatchListStyled>
     );
   }
 }

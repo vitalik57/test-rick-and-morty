@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import NotFound from "./Components/NotFound";
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={<NotFound />}>
+    <Suspense>
       <BrowserRouter>
         <App />
       </BrowserRouter>

@@ -46,34 +46,25 @@ export const EpisodeStyled = styled.div`
     flex-wrap: wrap;
     padding-right: 20px;
   }
+  h2 {
+    margin: 0;
+  }
   input {
     padding: 20px;
   }
-  li {
+  .location__planet {
     margin: 0;
     width: 350px;
   }
   .location__planet {
-    /* margin: 1
-em
- 0 0.5
-em
- 0; */
-    /* font-weight: normal; */
-    /* position: relative; */
     text-shadow: 0 -1px rgb(0 0 0 / 60%);
-    /* font-size: 28px; */
-    /* line-height: 40px; */
+
     background: #355681;
     background: rgba(53, 86, 129, 0.8);
     border: 1px solid #fff;
     padding: 5px 15px;
     color: white;
-    /* border-radius: 0 10
-px
- 0 10
-px
-; */
+
     box-shadow: inset 0 0 5px rgb(53 86 129 / 50%);
     font-family: "Muli", sans-serif;
   }

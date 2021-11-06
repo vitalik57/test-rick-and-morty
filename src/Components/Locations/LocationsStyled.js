@@ -9,6 +9,10 @@ export const EpisodeStyled = styled.div`
     justify-content: space-between;
     padding-right: 40px;
   }
+  .location__input {
+    display: flex;
+    padding: 10px;
+  }
   .find__name {
     color: #343434;
     font-weight: normal;
@@ -42,8 +46,12 @@ export const EpisodeStyled = styled.div`
     flex-wrap: wrap;
     padding-right: 20px;
   }
+  input {
+    padding: 20px;
+  }
   li {
     margin: 0;
+    width: 350px;
   }
   .location__planet {
     /* margin: 1

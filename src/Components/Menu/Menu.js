@@ -5,23 +5,35 @@ import { MenuStyled } from "./MenuStyled";
 const Menu = () => {
   return (
     <>
-    <MenuStyled><h1>Menu<h1>
-      <ul>
-        <li>
-          <NavLink to="/characters">Characters</NavLink>
-        </li>
-        <li>
-          <NavLink to="/episodes">Episodes</NavLink>
-        </li>
-        <li>
-          <NavLink to="/locations">Locations</NavLink>
-        </li>
-        <li>
-          <NavLink to="/list">My watch list</NavLink>
-        </li>
-      </ul>
-      <MenuStyled/>
-    
+      <MenuStyled>
+        {" "}
+        <div>
+          <h1>Menu</h1>
+
+          <ul>
+            <li>
+              <NavLink className="tags" to="/characters">
+                Characters
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="tags" to="/episodes">
+                Episodes
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="tags" to="/locations">
+                Locations
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="tags" to="/list">
+                My watch list
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </MenuStyled>
     </>
   );
 };

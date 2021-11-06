@@ -112,8 +112,7 @@ class MyWatchList extends Component {
           </Modal>
         )}
 
-        {/* TODO: вынести в отдельный компонент */}
-        <div>
+        <div className="todo__watch">
           <p>Всего заметок: {totalTodoCount}</p>
           <p>Выполнено: {completedTodoCount}</p>
         </div>

@@ -47,7 +47,7 @@ const Locations = () => {
                 <h2 className="find__name">Find by dimension</h2>
               </li>
             </ul>
-            <div>
+            <div className="location__input">
               {" "}
               <input type="text" name="name" onChange={changeInput} value={filter.name} />
               <input type="text" name="type" onChange={changeInput} value={filter.type} />

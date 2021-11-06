@@ -7,139 +7,134 @@ export const WatchListStyled = styled.div`
   padding-left: 15px;
   padding-right: 15px;
   .IconButton {
-  margin: 0;
-  padding: 10px;
-  border: none;
-  border-radius: 50%;
-  color: white;
-  font: inherit;
-  background-color: green;
-  cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font: inherit;
+    background-color: green;
+    cursor: pointer;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.TodoList {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 24px;
-}
-
-.TodoList__item {
-  
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  border: 1px solid black;
-  border-radius: 4px;
-
- 
-}
-
-.TodoList__text {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 24px;
-  margin-left: 24px;
-
-  .TodoList__item--completed & {
-    text-decoration: line-through;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
-}
-
-.TodoList__checkbox {
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-}
-
-.TodoList__btn {
-
-
-  margin-left: auto;
-  border-radius: 4px;
-  padding: 12px 24px;
-  background-color: $indigo;
-  color: $white;
-  font-weight: 500;
-
-  &:hover,
-  &:focus {
-    background-color: indigo-accent;
+  .button__container {
+    padding-left: 40px;
+  }
+  .TodoList {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 24px;
   }
 
-  &:active {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  .TodoList__item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
   }
-}
+
+  .TodoList__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 24px;
+    margin-left: 24px;
+
+    .TodoList__item--completed & {
+      text-decoration: line-through;
+    }
+  }
+
+  .TodoList__checkbox {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+
+  .TodoList__btn {
+    margin-left: auto;
+    border-radius: 4px;
+    padding: 12px 24px;
+    background-color: $indigo;
+    color: $white;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+      background-color: indigo-accent;
+    }
+
+    &:active {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+  .TodoFilter__label {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .TodoFilter__input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    font-family: inherit;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+  }
 
   .TodoEditor {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  border: 1px solid black;
-  border-radius: 4px;
-  margin-bottom: 20px;
-}
-
-.TodoEditor__textarea {
-  line-height: 16px;
-
-  height: line-height * 3 + 24px;
-  padding: 12px 16px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-
-  font: inherit;
-  line-height: line-height;
-  letter-spacing: 0.01em;
-
-  resize: none;
-  margin-bottom: 12px;
-}
-
-.TodoEditor__button {
-
-  width: 100%;
-  margin-left: auto;
-  border-radius: 4px;
-  padding: 12px 24px;
-  background-color: $indigo;
-  color: $white;
-  font-weight: 500;
-.TodoFilter {
-  width: 400px;
-  margin-bottom: 20px;
-}
-
-.TodoFilter__label {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-.TodoFilter__input {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-
-  font-family: inherit;
-  line-height: 1.3;
-  letter-spacing: 0.01em;
-}
-
-  &:hover,
-  &:focus {
-    background-color: indigo-accent;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-bottom: 20px;
   }
 
-  &:active {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  .TodoEditor__textarea {
+    line-height: 16px;
+
+    height: line-height * 3 + 24px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    font: inherit;
+    line-height: line-height;
+    letter-spacing: 0.01em;
+
+    resize: none;
+    margin-bottom: 12px;
   }
-}
+  .TodoFilter {
+    padding-left: 40px;
+    width: 400px;
+    margin-bottom: 20px;
+  }
+  .TodoEditor__button {
+    width: 100%;
+    margin-left: auto;
+    border-radius: 4px;
+    padding: 12px 24px;
+    background-color: $indigo;
+    color: $white;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+      background-color: indigo-accent;
+    }
+
+    &:active {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
   .Modal__backdrop {
     position: fixed;
     top: 0;
@@ -162,14 +157,7 @@ export const WatchListStyled = styled.div`
     border-radius: 3px;
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   }
-  body {
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(#f00000, #dc281e);
-    font-family: sans-serif;
-  }
+
   .container {
     max-width: 1440px;
     margin-left: auto;
@@ -199,8 +187,6 @@ export const WatchListStyled = styled.div`
     font-size: 3rem;
   }
 
-
-
   .todo-form {
     margin: 40px 0px;
   }
@@ -225,11 +211,9 @@ export const WatchListStyled = styled.div`
     font-size: 1.2rem;
   }
 
-
   .todo-items {
     min-width: 350px;
   }
-
 
   .item {
     background-color: #fff;
@@ -247,7 +231,6 @@ export const WatchListStyled = styled.div`
     border-bottom-right-radius: 7px;
   }
 
-
   .checkbox {
     margin-right: 10px;
   }
@@ -263,10 +246,10 @@ export const WatchListStyled = styled.div`
     font-size: 1.1rem;
     font-weight: 550;
   }
-
+  .todo__watch {
+    padding-left: 40px;
+  }
   /* .checked {
     text-decoration: line-through;
   } */
-
-
 `;

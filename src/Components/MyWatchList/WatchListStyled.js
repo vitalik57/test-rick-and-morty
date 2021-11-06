@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const WatchListStyled = styled.div`
-  /* common styles */
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -12,9 +11,9 @@ export const WatchListStyled = styled.div`
   padding: 10px;
   border: none;
   border-radius: 50%;
-  color: $white;
+  color: white;
   font: inherit;
-  background-color: $green;
+  background-color: green;
   cursor: pointer;
 
   display: inline-flex;
@@ -23,8 +22,6 @@ export const WatchListStyled = styled.div`
 }
 
 .TodoList {
-  @extend %list;
-
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -32,30 +29,14 @@ export const WatchListStyled = styled.div`
 }
 
 .TodoList__item {
-  position: relative;
+  
   display: flex;
   align-items: center;
   padding: 20px;
-  border: 1px solid $black;
+  border: 1px solid black;
   border-radius: 4px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-
-    background-color: $green;
-
-    transform: scaleX(0);
-    transition: transform 250ms $timing-function;
-  }
-
-  &--completed::before {
-    transform: scaleX(1);
-  }
+ 
 }
 
 .TodoList__text {
@@ -87,7 +68,7 @@ export const WatchListStyled = styled.div`
 
   &:hover,
   &:focus {
-    background-color: $indigo-accent;
+    background-color: indigo-accent;
   }
 
   &:active {
@@ -99,21 +80,21 @@ export const WatchListStyled = styled.div`
   display: flex;
   flex-direction: column;
   padding: 16px;
-  border: 1px solid $black;
+  border: 1px solid black;
   border-radius: 4px;
   margin-bottom: 20px;
 }
 
 .TodoEditor__textarea {
-  $line-height: 16px;
+  line-height: 16px;
 
-  height: $line-height * 3 + 24px;
+  height: line-height * 3 + 24px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   font: inherit;
-  line-height: $line-height;
+  line-height: line-height;
   letter-spacing: 0.01em;
 
   resize: none;
@@ -121,7 +102,6 @@ export const WatchListStyled = styled.div`
 }
 
 .TodoEditor__button {
-  @extend %button;
 
   width: 100%;
   margin-left: auto;
@@ -153,7 +133,7 @@ export const WatchListStyled = styled.div`
 
   &:hover,
   &:focus {
-    background-color: $indigo-accent;
+    background-color: indigo-accent;
   }
 
   &:active {
@@ -203,12 +183,9 @@ export const WatchListStyled = styled.div`
   }
 
   ul {
-    list-style-type: none; /* get rid of bullet points on side of list items */
+    list-style-type: none;
   }
 
-  /* common style ends */
-
-  /* container */
   .container {
     min-width: 700px;
     display: flex;
@@ -222,7 +199,7 @@ export const WatchListStyled = styled.div`
     font-size: 3rem;
   }
 
-  /* todo-form */
+
 
   .todo-form {
     margin: 40px 0px;
@@ -248,14 +225,12 @@ export const WatchListStyled = styled.div`
     font-size: 1.2rem;
   }
 
-  /* todo-form style ends */
 
-  /* todo-items */
   .todo-items {
     min-width: 350px;
   }
 
-  /* each li with class="item" */
+
   .item {
     background-color: #fff;
     padding: 10px;
@@ -272,7 +247,6 @@ export const WatchListStyled = styled.div`
     border-bottom-right-radius: 7px;
   }
 
-  /* item style end */
 
   .checkbox {
     margin-right: 10px;
@@ -290,12 +264,9 @@ export const WatchListStyled = styled.div`
     font-weight: 550;
   }
 
-  /* applied when the todo item is checked */
-  .checked {
+  /* .checked {
     text-decoration: line-through;
-  }
+  } */
 
-  /* todo-items style ends */
 
-  /* container style ends */
 `;

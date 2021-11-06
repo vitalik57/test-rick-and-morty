@@ -1,6 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import LocationList from "./LocationList";
+import styles from "../../Components/styled.module.css";
+
+import { EpisodeStyled } from "./LocationsStyled";
 const initialFilter = { name: "", type: "", dimension: "" };
 const Locations = () => {
   const [state, setState] = useState({ location: [] });
@@ -30,35 +33,42 @@ const Locations = () => {
   };
   return (
     <>
-      <div>
-        <ul>
-          <li>
-            <h2>Find by name</h2>
-            <input type="text" name="name" onChange={changeInput} value={filter.name} />
-          </li>
-          <li>
-            <h2>Find by type</h2>
-            <input type="text" name="type" onChange={changeInput} value={filter.type} />
-          </li>{" "}
-          <li>
-            <h2>Find by dimension</h2>
-            <input type="text" name="dimension" onChange={changeInput} value={filter.dimension} />
-          </li>
-        </ul>
-        <div>
-          <ul>
-            {" "}
-            {state.location.length ? (
-              <LocationList
-                locationType={getVisibleLocationType()}
-                dimension={getVisibleLocationDimension()}
-                names={getVisibleLocationName()}
-              />
-            ) : (
-              ""
-            )}
-          </ul>
-        </div>
+      <div className={styles.back__location}>
+        <EpisodeStyled>
+          <div>
+            <ul className="input__list">
+              <li className="filtered__li">
+                <h2 className="find__name"> Find by name</h2>
+              </li>
+              <li className="filtered__li">
+                <h2 className="find__name">Find by type</h2>
+              </li>{" "}
+              <li className="filtered__li">
+                <h2 className="find__name">Find by dimension</h2>
+              </li>
+            </ul>
+            <div>
+              {" "}
+              <input type="text" name="name" onChange={changeInput} value={filter.name} />
+              <input type="text" name="type" onChange={changeInput} value={filter.type} />
+              <input type="text" name="dimension" onChange={changeInput} value={filter.dimension} />
+            </div>
+            <div>
+              <ul>
+                {" "}
+                {state.location.length ? (
+                  <LocationList
+                    locationType={getVisibleLocationType()}
+                    dimension={getVisibleLocationDimension()}
+                    names={getVisibleLocationName()}
+                  />
+                ) : (
+                  ""
+                )}
+              </ul>
+            </div>
+          </div>
+        </EpisodeStyled>
       </div>
     </>
   );

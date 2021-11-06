@@ -9,9 +9,10 @@ import MyWatchList from "./Components/MyWatchList/MyWatchList";
 
 import NotFound from "./Components/NotFound";
 function App() {
-  return <>
-   {/* <Characters/> */}
-        <Switch>
+  return (
+    <>
+      {/* <Characters/> */}
+      <Switch>
         <Route exact path="/" component={Menu} />
         <Route exact path="/characters" component={Characters} />
         <Route path="/episodes" component={Episodes} />
@@ -19,7 +20,8 @@ function App() {
         <Route path="/list" component={MyWatchList} />
         <Route component={NotFound} />
       </Switch>
-  </>;
+    </>
+  );
 }
 
 export default App;

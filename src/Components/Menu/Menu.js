@@ -1,9 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { MenuStyled } from "./MenuStyled";
 
 const Menu = () => {
   return (
     <>
+    <MenuStyled><h1>Menu<h1>
       <ul>
         <li>
           <NavLink to="/characters">Characters</NavLink>
@@ -18,6 +20,8 @@ const Menu = () => {
           <NavLink to="/list">My watch list</NavLink>
         </li>
       </ul>
+      <MenuStyled/>
+    
     </>
   );
 };

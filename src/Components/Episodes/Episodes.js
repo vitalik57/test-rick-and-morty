@@ -1,6 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import EpisodeList from "./EpisodeList";
+import styles from "../../Components/styled.module.css";
+
+import { EpisodesStyled } from "./EpisodesStyled";
 const Episodes = () => {
   const [state, setstate] = useState({ episode: [] });
   const [stateFilter, setFilter] = useState({ filter: "" });
@@ -20,12 +23,16 @@ const Episodes = () => {
   };
   return (
     <>
-      <div>
-        <h2>Find Episode</h2>
-        <input type="text" name="filter" value={stateFilter.filter} onChange={handleChange} />
-        <div>
-          <ul>{state.episode.length ? <EpisodeList episode={getVisibleEpisode()} /> : <p>There are no episode here</p>}</ul>
-        </div>
+      <div className={styles.back__episodes}>
+        <EpisodesStyled>
+          <div>
+            <h2 className="form__name">Find Episode</h2>
+            <div>
+              <input className="form__input" type="text" name="filter" value={stateFilter.filter} onChange={handleChange} />
+              <ul>{state.episode.length ? <EpisodeList episode={getVisibleEpisode()} /> : <p>There are no episode here</p>}</ul>
+            </div>
+          </div>
+        </EpisodesStyled>
       </div>
     </>
   );

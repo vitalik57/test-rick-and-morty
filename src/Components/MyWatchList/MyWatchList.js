@@ -2,7 +2,7 @@
 // import { useLocalStorageState } from "react-localstorage-hooks";
 // import { v4 as uuidv4 } from "uuid";
 // import { WatchListStyled } from "./WatchListStyled";
-import React, {Component, useEffect, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import shortid from "shortid";
 import TodoList from "./components/TodoList";
 import TodoEditor from "./components/TodoEditor";
@@ -11,90 +11,7 @@ import Modal from "./components/Modal";
 import IconButton from "./components/IconButton";
 import { ReactComponent as AddIcon } from "./icons/add.svg";
 import { WatchListStyled } from "./WatchListStyled";
-// const initialState = {  todos: [],
-//     filter: "",
-//     showModal: false};
-// const MyWatchList = () => {
-//   const [state, setState] = useState(initialState);
-// const   addTodo = text => {
-//     const todo = {
-//       id: shortid.generate(),
-//       text,
-//       completed: false
-//     };
 
-//     setState(({ todos }) => ({
-//       todos: [todo, ...todos]
-//     }));
-
-//     // this.toggleModal();
-//   };
-
-//  const deleteTodo = todoId => {
-//     setState(({ todos }) => ({
-//       todos: todos.filter(({ id }) => id !== todoId)
-//     }));
-//   };
-
-//  const toggleCompleted = todoId => {
-//     setState(prev=>({ todos }) => ({
-//       todos: todos.map(todo => (todo.id === todoId ? { ...todo, completed: !todo.completed } : todo))
-//     }));
-//   };
-
-//  const changeFilter = e => {
-//     setState({ filter: e.currentTarget.value });
-//   };
-
-// const  getVisibleTodos = () => {
-//     // const { filter, todos } = this.state;
-//     const normalizedFilter = state.filter.toLowerCase();
-
-//     return state.todos.filter(({ text }) => text.toLowerCase().includes(normalizedFilter));
-//   };
-
-// const  calculateCompletedTodos = () => {
-//     // const { todos } = this.state;
-
-//     return state.todos.reduce((total, todo) => (todo.completed ? total + 1 : total), 0);
-//   };
-
-// const  toggleModal = () => {
-//     this.setState(({ showModal }) => ({
-//       showModal: !showModal
-//     }));
-//   };
-//   // const { todos, filter, showModal } = this.state;
-//     const totalTodoCount = state. todos.length;
-//     const completedTodoCount = calculateCompletedTodos();
-//     const visibleTodos = getVisibleTodos();
-
-//   return (
-//      <WatchListStyled>
-//         <IconButton onClick={toggleModal} aria-label="Добавить todo">
-//           <AddIcon width="40" height="40" fill="#fff" />
-//         </IconButton>
-
-//         {state.showModal && (
-//           <Modal onClose={toggleModal}>
-//             <TodoEditor onSubmit={addTodo} />
-//           </Modal>
-//         )}
-
-//         {/* TODO: вынести в отдельный компонент */}
-//         <div>
-//           <p>Всего заметок: {totalTodoCount}</p>
-//           <p>Выполнено: {completedTodoCount}</p>
-//         </div>
-
-//         <Filter value={state.filter} onChange={changeFilter} />
-
-//         <TodoList todos={visibleTodos} onDeleteTodo={deleteTodo} onToggleCompleted={toggleCompleted} />
-//       </WatchListStyled>
-//   );
-// }
-
-// export default MyWatchList;
 class MyWatchList extends Component {
   state = {
     todos: [],

@@ -4,30 +4,30 @@ const LocationList = ({ names, locationType, dimension }) => {
     <>
       <div>
         {names.map(name => (
-          <li key={name.id}>
-            <h2>{name.name}</h2>
-            <p>{name.type}</p>
-            <p>{name.dimension}</p>
+          <li className="location__planet" key={name.id}>
+            <h2>Name:{name.name}</h2>
+            <p> Type:{name.type}</p>
+            <p>Dimension:{name.dimension}</p>
           </li>
         ))}
       </div>
 
       <div>
         {locationType.map(name => (
-          <li key={name.id}>
-            <h2>{name.name}</h2>
-            <p>{name.type}</p>
-            <p>{name.dimension}</p>
+          <li className="location__planet" key={name.id}>
+            <h2>Name:{name.name}</h2>
+            <p> Type:{name.type}</p>
+            <p>Dimension:{name.dimension}</p>
           </li>
         ))}
       </div>
 
       <div>
         {dimension.map(name => (
-          <li key={name.id}>
-            <h2>{name.name}</h2>
-            <p>{name.type}</p>
-            <p>{name.dimension}</p>
+          <li className="location__planet" key={name.id}>
+            <h2>Name:{name.name}</h2>
+            <p> Type:{name.type}</p>
+            <p>Dimension:{name.dimension}</p>
           </li>
         ))}
       </div>

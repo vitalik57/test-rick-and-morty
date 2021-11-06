@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import { createPortal } from "react-dom";
 // import "./Modal.scss";
 // const modalRoot = document.querySelector("#modal-root");
-const Modal = ({ children }) => {
+const Modal = ({ children, onClose }) => {
   const handleBackdropClick = event => {
     // console.log('Кликнули в бекдроп');
 
@@ -10,7 +10,7 @@ const Modal = ({ children }) => {
     // console.log('target: ', event.target);
 
     if (event.currentTarget === event.target) {
-      this.props.onClose();
+      onClose();
     }
   };
   return (
